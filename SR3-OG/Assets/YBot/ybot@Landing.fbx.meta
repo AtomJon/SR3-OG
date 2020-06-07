@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: c4a9b4b38b9a25f469fcbf8a3aec37c8
+guid: 2c268f0c67b814942ba94c09b1c312c1
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: mixamo.com
+    second: Landing
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -35,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: mixamo.com
+      name: Landing
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 1
+      lastFrame: 40
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -52,9 +52,9 @@ ModelImporter:
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
+      keepOriginalPositionY: 0
       keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
@@ -75,7 +75,7 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
-    fileIdsGeneration: 1
+    fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -104,17 +104,8 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips:
-  - e9c959d588aef664ca0e83419c7d5e34
-  - 27f695b80be565c4680218b82fba4685
-  - aa0ed300f53d3544593ea3bc10ef728d
-  - 976c07f8f33846d4ab4e64ad1b3a2625
-  - ea785816f0e609949af46e24fe1d10f9
-  - 2c268f0c67b814942ba94c09b1c312c1
-  - 48d052db3a8351c47b8ff0cc7a2c3820
-  - ee10abe5914acef478a94a007851d674
-  - 8b29f64ad51ca0a42881d1f36e774655
-  importAnimation: 0
+  referencedClips: []
+  importAnimation: 1
   humanDescription:
     serializedVersion: 3
     human:
@@ -914,11 +905,12 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: c4a9b4b38b9a25f469fcbf8a3aec37c8,
+    type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 2
   additionalBone: 0
   userData: 
   assetBundleName: 

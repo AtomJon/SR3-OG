@@ -17,18 +17,19 @@ public class PlayerController : MonoBehaviour
 	float speedSmoothVelocity;
 	float currentSpeed;
 	float velocityY;
+
 	bool inJump;
+	string lastAnimState;
 
 	Animator animator;
 	Transform cameraT;
 	CharacterController controller;
-	string lastAnimState;
 
 	void Start()
 	{
 		animator = GetComponent<Animator>();
-		cameraT = Camera.main.transform;
 		controller = GetComponent<CharacterController>();
+		cameraT = Camera.main.transform;
 	}
 
 	void Update()
@@ -46,7 +47,7 @@ public class PlayerController : MonoBehaviour
 			Jump();
 		}
 		// animator
-		float animationSpeedPercent = ((running) ? currentSpeed / runSpeed : currentSpeed / walkSpeed * .5f);
+		//float animationSpeedPercent = ((running) ? currentSpeed / runSpeed : currentSpeed / walkSpeed * .5f);
 
 		string animState;
 		if (inputDir.magnitude == 0)
@@ -76,12 +77,15 @@ public class PlayerController : MonoBehaviour
 
 		if (controller.isGrounded)
 		{
-			velocityY = 0;
 			if (inJump)
 			{
 				inJump = false; // Now we have landed from jump, duh
-				animator.CrossFadeInFixedTime("Landing", .1f);
+
+				Debug.Log($"Gravity: {velocityY}");
+				animator.CrossFadeInFixedTime(velocityY > -5f ? "Landing" : "Hard Landing", .01f);
 			}
+
+			velocityY = 0;
 		}
 	}
 
@@ -114,7 +118,7 @@ public class PlayerController : MonoBehaviour
 	{
 		if (lastAnimState != animState)
 		{
-			//animator.ResetTrigger(lastAnimState);
+			animator.ResetTrigger(lastAnimState);
 			animator.SetTrigger(animState);
 
 			lastAnimState = animState;
